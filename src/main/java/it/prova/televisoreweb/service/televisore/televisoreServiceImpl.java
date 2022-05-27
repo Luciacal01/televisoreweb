@@ -5,7 +5,7 @@ import java.util.List;
 import it.prova.televisoreweb.dao.televisore.TelevisoreDAO;
 import it.prova.televisoreweb.model.Televisore;
 
-public class televisoreServiceImpl implements TelevisoreService {
+public class TelevisoreServiceImpl implements TelevisoreService {
 	
 	private TelevisoreDAO televisoreDAO;
 
@@ -36,8 +36,7 @@ public class televisoreServiceImpl implements TelevisoreService {
 
 	@Override
 	public int rimuoviTelevisore(Long idDaRimuovere) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		return televisoreDAO.delete(televisoreDAO.get(idDaRimuovere));
 	}
 
 	@Override
