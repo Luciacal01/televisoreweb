@@ -47,5 +47,7 @@
 		<% }%>
 	</table>
 	
+	<a href="PrepareInsertTelevisoreServlet" > Inserisci televisore</a>
+	
 </body>
 </html>

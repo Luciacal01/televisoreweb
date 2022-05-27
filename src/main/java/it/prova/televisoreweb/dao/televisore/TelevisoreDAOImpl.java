@@ -17,8 +17,12 @@ public class TelevisoreDAOImpl implements TelevisoreDAO {
 
 	@Override
 	public List<Televisore> list() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		List<Televisore> results= new ArrayList<Televisore>();
+		
+		for (Televisore televisoreItem : DB_Mock.LISTA_TELEVISORI) {
+			results.add(televisoreItem);
+		}
+		return results;
 	}
 
 	@Override
@@ -40,8 +44,8 @@ public class TelevisoreDAOImpl implements TelevisoreDAO {
 
 	@Override
 	public int insert(Televisore input) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		input.setIdTelevisore(DB_Mock.getNexIdAvailable());
+		return DB_Mock.LISTA_TELEVISORI.add(input)?1:0;
 	}
 
 	@Override

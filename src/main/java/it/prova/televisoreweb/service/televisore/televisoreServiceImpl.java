@@ -21,8 +21,7 @@ public class televisoreServiceImpl implements TelevisoreService {
 
 	@Override
 	public List<Televisore> listaDiTuttiITelevisori() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return televisoreDAO.list();
 	}
 
 	@Override
@@ -32,8 +31,7 @@ public class televisoreServiceImpl implements TelevisoreService {
 
 	@Override
 	public int inserisciNuovo(Televisore televisoreDaInserire) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		return televisoreDAO.insert(televisoreDaInserire);
 	}
 
 	@Override
