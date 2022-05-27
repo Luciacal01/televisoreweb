@@ -27,8 +27,7 @@ public class televisoreServiceImpl implements TelevisoreService {
 
 	@Override
 	public Televisore cercaTelevisorePerId(Long id) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		return televisoreDAO.get(id);
 	}
 
 	@Override
