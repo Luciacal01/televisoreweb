@@ -41,8 +41,7 @@ public class TelevisoreServiceImpl implements TelevisoreService {
 
 	@Override
 	public int aggiornaTelevisore(Long idDaAggiornare) throws Exception {
-		// TODO Auto-generated method stub
-		return 0;
+		return televisoreDAO.update(televisoreDAO.get(idDaAggiornare));
 	}
 
 }
