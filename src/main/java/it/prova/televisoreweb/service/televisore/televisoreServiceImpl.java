@@ -6,17 +6,17 @@ import it.prova.televisoreweb.dao.televisore.TelevisoreDAO;
 import it.prova.televisoreweb.model.Televisore;
 
 public class televisoreServiceImpl implements TelevisoreService {
+	
+	private TelevisoreDAO televisoreDAO;
 
 	@Override
 	public void setTelevisoreDAO(TelevisoreDAO televisoreDAO) {
-		// TODO Auto-generated method stub
-
+		this.televisoreDAO=televisoreDAO;
 	}
 
 	@Override
 	public List<Televisore> cercaPerMarcaeModello(String marca, String modello) {
-		// TODO Auto-generated method stub
-		return null;
+		return televisoreDAO.findByMarcaAndModello(marca, modello);
 	}
 
 	@Override

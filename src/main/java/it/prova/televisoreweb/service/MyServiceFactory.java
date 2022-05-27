@@ -7,7 +7,7 @@ import it.prova.televisoreweb.service.televisore.televisoreServiceImpl;
 public class MyServiceFactory {
 	private static TelevisoreService TELEVISORE_SERVICE_INSTANCE;
 	
-	private static TelevisoreService getTelevisoreServiceInstance() {
+	public static TelevisoreService getTelevisoreServiceInstance() {
 		if(TELEVISORE_SERVICE_INSTANCE==null)
 			TELEVISORE_SERVICE_INSTANCE= new televisoreServiceImpl();
 		
